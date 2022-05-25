@@ -4,7 +4,7 @@ public:
     
     bool validPath(int n, vector<vector<int>>& edges, int source, int destination) {
         vector<vector<int>> adj(n);
-        
+        //as edges are given create graph
         for(int i = 0;i<edges.size();i++){
             int u = edges[i][0];
             int v = edges[i][1];
@@ -15,7 +15,7 @@ public:
         vector<int> vis(n , 0);
         queue<int> q;
         
-        
+        //simple bfs
         q.push(source);
         vis[source] = 1;
         while(!q.empty()){
