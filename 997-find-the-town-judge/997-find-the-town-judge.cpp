@@ -4,8 +4,8 @@ public:
         vector<int> v(n+1,0);
         for(auto x:trust)
         {
-            v[x[0]]--;
-            v[x[1]]++;
+            v[x[0]]--;//Subtarcting the value if trust someone
+            v[x[1]]++;//is trusted by someone
         }
         for(int i=1;i<v.size();i++)
         {
