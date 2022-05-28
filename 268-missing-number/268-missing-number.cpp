@@ -12,7 +12,7 @@ public:
         //         return v[i];
         // }
         // return v[n];
-        int sum = 0; // sum of all numbers initially 0
+        int sum = 0;
         int total = nums.size()*(nums.size() + 1)/2;
         for (auto number : nums) { 
             sum += number; 
