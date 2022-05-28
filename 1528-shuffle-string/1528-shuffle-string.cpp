@@ -10,7 +10,7 @@ public:
             v[indices[i]]=s[i];
         }
         for(int i=0;i<n;i++)
-            s[k++]=v[i];
+            s[i]=v[i];
         return s;
     }
 };
