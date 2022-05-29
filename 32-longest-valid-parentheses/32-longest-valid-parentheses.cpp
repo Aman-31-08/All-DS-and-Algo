@@ -1,7 +1,7 @@
 class Solution {
 public:
     int longestValidParentheses(string s) {
-        //taking a stack and initializing it with -1 in case of )
+        //taking a stack and initializing it with -1 in case of ) to pop -1 to prevent stack overflow
         
         stack<int> st;
         st.push(-1);
