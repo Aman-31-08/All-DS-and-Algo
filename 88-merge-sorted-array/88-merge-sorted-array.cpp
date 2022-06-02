@@ -7,7 +7,6 @@ public:
            nums2.push_back(nums1[i]);
             
        }
-        for(auto it:nums2) cout<<it;
         nums1.clear();
         for(int i=0;i<m+n;i++)
        {
