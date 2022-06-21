@@ -7,24 +7,22 @@ class Solution {
   public:
     vector<int> v;
     // Function to return a list containing the DFS traversal of the graph.
-    // vector<int> v;
-    // Function to return a list containing the DFS traversal of the graph.
-    void solve(vector<int> g[],int s,vector<int> &vis)
+    void dfs(vector<int> adj[],int s,vector<int> &vis)
     {
         vis[s]=1;
         v.push_back(s);
-        for(auto x:g[s])
+        for(auto x:adj[s])
         {
             if(!vis[x])
             {
-                solve(g,x,vis);
+                dfs(adj,x,vis);
             }
         }
     }
     vector<int> dfsOfGraph(int V, vector<int> adj[]) {
         v.clear();
         vector<int> vis(V,0);
-        solve(adj,0,vis);
+        dfs(adj,0,vis);
         return v;
     }
 };
