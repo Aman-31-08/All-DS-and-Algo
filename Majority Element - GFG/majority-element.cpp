@@ -16,17 +16,40 @@ class Solution{
     int majorityElement(int a[], int size)
     {
         
-        map<int,int> m;
+        // unordered_map<int,int> m;
+        // for(int i=0;i<size;i++)
+        // {
+        //     m[a[i]]++;
+        // }
+        // for(auto it:m)
+        // {
+        //     if(it.second>size/2)
+        //         return it.first;
+        // }
+        // return -1;
+        int ma=a[0];
+        int c=1;
+        for(int i=1;i<size;i++)
+        {
+            if(a[i]==ma)
+            {
+                c++;
+            }
+            else c--;
+            if(c==0)
+            {
+                ma=a[i];
+                c=1;
+            }
+        }
+        int count=0;
         for(int i=0;i<size;i++)
         {
-            m[a[i]]++;
+            if(a[i]==ma) count++;
         }
-        for(auto it:m)
-        {
-            if(it.second>size/2)
-                return it.first;
-        }
+        if(count>size/2) return ma;
         return -1;
+        
         
     }
 };
