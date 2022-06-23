@@ -13,21 +13,21 @@ class Solution
         // Code here
         vector<int> ans(V,INT_MAX);
         ans[S]=0;
-        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>> > pq;
-        pq.push({0,S});
-        while(!pq.empty())
+        priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> q;
+        q.push({0,S});
+        while(!q.empty())
         {
-            int len=pq.top().first;
-            int parent=pq.top().second;
-            pq.pop();
-            for(auto it:adj[parent])
+            int u=q.top().first;
+            int p=q.top().second;
+            q.pop();
+            for(auto x:adj[p])
             {
-                int child =it[0];
-                int weight = it[1];
-                if(ans[child]>len+weight)
+                int c=x[0];
+                int p=x[1];
+                if(ans[c]>u+p)
                 {
-                    ans[child]=len+weight;
-                    pq.push({len+weight,child});
+                    ans[c]=u+p;
+                    q.push({u+p,c});
                 }
             }
         }
