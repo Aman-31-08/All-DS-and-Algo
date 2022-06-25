@@ -13,7 +13,7 @@ public:
             {
                 pq.push(matrix[i][j]); 
                 
-                while(pq.size() > k)
+                if(pq.size() > k)
                 {
                     pq.pop();
                 }
