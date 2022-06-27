@@ -37,7 +37,7 @@ class Solution
         sort(v.begin(),v.end(),greater<pair<double,int>>());
         for(int i=0;i<n;i++)
         {
-            if((s+arr[v[i].second].weight)<W)
+            if((s+arr[v[i].second].weight)<=W)
             {
                 ans+=arr[v[i].second].value;
                 s+=arr[v[i].second].weight;
