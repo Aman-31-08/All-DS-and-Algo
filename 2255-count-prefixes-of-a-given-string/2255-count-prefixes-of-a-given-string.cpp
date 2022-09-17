@@ -4,10 +4,10 @@ public:
     {
         for(int i=0;i<c.length();i++)
         {
-            for(int j=0;j<s.length();j++)
-            {
+           // for(int j=0;j<s.length();j++)
+           // {
                 if(c[i]!=s[i]) return 0;
-            }
+           // }
         }
         return 1;
     }
